@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	searchForm.addEventListener("submit", (event) => {
 		event.preventDefault();
+		userList.innerHTML = "";
 		fetch(
 			`https://api.github.com/search/users?q=${event.target.search.value}`
 		)
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				userData.items.forEach((user) => {
 					const li = document.createElement("li");
 					li.textContent = user.login;
-					userList.appendChild(li);
+					userList.append(li);
 				});
 			});
 		searchForm.reset();
