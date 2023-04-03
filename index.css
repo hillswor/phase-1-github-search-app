@@ -1,13 +1,81 @@
-#main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(29, 80%, 58%);
+  --first-color-light: hsl(29, 80%, 70%);
+  --black-color: hsl(29, 16%, 10%);
+  --text-color: hsl(29, 8%, 65%);
+  --body-color: hsl(29, 100%, 99%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h3-font-size: 1.125rem;
+  --smaller-font-size: 0.75rem;
 }
 
-#github-container {
-  display: flex;
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-ul {
-  list-style: none;
+body {
+  font-family: var(--body-font);
+  background-color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  height: auto;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  position: relative;
+  margin: 10px;
+  width: 256px;
+  background-color: var(--black-color);
+  padding: 1.25rem 2rem 3rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
+}
+
+.card-img {
+  width: auto;
+  border-radius: 50%;
+}
+
+.card-border {
+  width: 110px;
+  height: 110px;
+  border: 2px solid var(--first-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0.75rem;
+}
+
+.card-name {
+  color: var(--first-color);
+  font-size: var(--h3-font-size);
+  /*  padding-top: px;*/
+  font-weight: 500;
+}
+
+.view-repositories {
+  color: var(--text-color);
+  font-size: var(--smaller-font-size);
+  font-weight: 500;
 }
